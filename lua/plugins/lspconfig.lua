@@ -33,7 +33,6 @@ return {
 				"clangd",   -- C/C++
 				"gopls",    -- Go
 				"ty",       -- Python
-				"ts_ls",    -- JS/TS
 				"elixirls", -- Elixir
 				"jdtls",    -- Java
 			},

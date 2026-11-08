@@ -10,10 +10,9 @@ return {
 				"stylua",       -- lua
 				"clang-format", -- c / cpp
 				"goimports",    -- go
-				"prettier",     -- js / ts
+				"ruff",         -- python
 				-- linters
 				"revive",       -- go
-				"eslint_d",     -- js / ts
 			},
 			run_on_start = true,
 		})
