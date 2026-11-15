@@ -12,6 +12,7 @@ A modern, feature-rich personal Neovim setup managed with [lazy.nvim](https://gi
 * **Git Integration:** Neogit, Gitsigns, Diffview
 * **Debugging:** nvim-dap, nvim-dap-ui
 * **Editor Enhancements:** Treesitter context, Auto-save, Autopairs, Todo-comments, Illuminate
+* **AI Tools:** Sidekick for AI CLI sessions
 
 | Category | Plugins |
 |----------|---------|
@@ -26,10 +27,11 @@ A modern, feature-rich personal Neovim setup managed with [lazy.nvim](https://gi
 | Git | `gitsigns.nvim`, `neogit`, `diffview.nvim` |
 | UI | `lualine.nvim`, `which-key.nvim`, `indent-blankline.nvim`, `nvim-web-devicons` |
 | Productivity | `todo-comments.nvim`, `nvim-autopairs`, `vim-illuminate`, `project.nvim` |
+| AI Tools | `sidekick.nvim` |
 
 ## 📋 Prerequisites
 
-- **Neovim** >= 0.11 (uses the `vim.lsp.config()` API)
+- **Neovim** >= 0.11.2 (uses the `vim.lsp.config()` API and Sidekick)
 - **Git**
 - **ripgrep** — required for Telescope live grep
 - **Nerd Font** — required for icons
@@ -109,6 +111,23 @@ nvim
 | `<leader>a` | Add current file to Harpoon list |
 | `<C-e>` | Toggle Harpoon quick menu |
 | `<leader>1`–`<leader>4` | Jump to Harpoon file 1–4 |
+
+### 🤖 Sidekick
+
+| Key | Description |
+|-----|-------------|
+| `<C-.>` | Focus the Sidekick CLI |
+| `<localleader>aa` | Toggle the Sidekick CLI |
+| `<localleader>as` | Select an AI CLI |
+| `<localleader>ad` | Detach the current CLI session |
+| `<localleader>at` | Send the current line or selection |
+| `<localleader>af` | Send the current file |
+| `<localleader>av` | Send the visual selection |
+| `<localleader>ap` | Select a prompt |
+
+Sidekick's CLI works with supported AI command-line tools. Its Next Edit
+Suggestions feature additionally requires the Copilot language server to be
+configured and enabled.
 
 ### 🐛 Debugging (DAP)
 
