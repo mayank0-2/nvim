@@ -17,6 +17,16 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "go",
+	callback = function()
+		vim.bo.tabstop = 4
+		vim.bo.shiftwidth = 4
+		vim.bo.softtabstop = 0
+		vim.bo.expandtab = false
+	end,
+})
+
 -- Sync clipboard between OS and Neovim
 vim.opt.clipboard = "unnamedplus"
 
